@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: black;
+            font-family: "Sofia", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      h1{
+            font-weight: 600;
+            font-size: 70px;
+            margin-left: 50px;
+            color: rgb(255, 255, 255);
+          transition: 0.3s;
+      
+        }
+        h1:hover{
+        color: rgb(219, 221, 223);
+        }
+       
+        .v{
+      width: 50%;
+           
+            border: 1px solid black;
+            margin-left: 30px;
+            background-color: black;
+        }
+        #v1{
+            width: 40%;
+            height: 500px;
+            background-color: #9700ff;
+            border: 1px solid black;
+            border-radius: 50%; 
+            overflow: hidden;
+            margin-left: 60px;
+          }
+
+        #cont{
+         display: flex;
+         flex-wrap: wrap;
+            width: 100%;
+          
+        }
+        .k{height: 550px;
+            width: 100%;
+        filter: grayscale(100%);
+        transition: 0.9s;
+       }
+       .k:hover{
+      
+        background-color: rgb(255, 1, 1);
+        filter: grayscale(0%);
+       }
+.j{
+
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    font-weight: 300;
+    font-size: 30px;
+
+
+
+ 
+   
+}
+.j1{
+    width: 110px;
+    height: 50px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin-left: 66px;
+    padding: 15PX;
+    box-sizing: border-box;
+    font-family: "Sofia", sans-serif;
+    transition: 0.4s;
+}
+     .j1:hover{
+        color: rgb(116, 116, 110);
+
+     }  
+     .coursor{
+   
+        border-radius: 50%;
+        height: 50px;
+        mix-blend-mode: difference;
+        width: 50px;
+        position: absolute;
+        transition: all linear 0.06s;
+     } 
+  
+     h2{
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+            font-size: 70px;
+            margin-left: 30px;
+
+     }
+     h2:hover{
+      color: rgb(255, 255, 255);
+      transition: all linear 0.06s;
+     }
+     #new{
+        width: 100%;
+        background-color: black;
+        height: 800px;
+   
+     }
+     .elem{
+        height: 120px;
+        width: 100%;
+        border-bottom: 1px solid white;
+        display: flex;
+    align-items: center;
+    position: relative;
+    
+     }
+
+     .elem img{
+        height: 140px;
+        width: 170px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        position: absolute;
+        opacity: 0;
+        mix-blend-mode: difference;
+        transition: all linear 0.4s;
+     }
+     a{color: aliceblue;
+        text-decoration: none;
+      
+     }
+     a:hover{
+        color: rgb(152, 144, 144);
+     }
+    </style>
+</head>
+<body>
+    <div class="j">
+      
+        <div class="j1" ><a href="">Home</a></div>
+        <div class="j1"><a href="#new">Skills</a></div>
+        <div class="j1"><a href="">Projects</a></div>
+        <div class="j1"><a href="">Certification</a></div>
+    </div>
+    <div id="cont">
+        <div class="v">
+
+            <h1>Hello !</h1>
+            <h1>My self <span style="color: #9700ff;">Amogh Chavan</span> </h1>
+            <h2 >Java Developer</h2>
+         </div>
+        
+         <div id="v1">
+      <img class="k" src="amoghpics_preview_rev_1.png" alt="">
+         </div>
+    </div>
+<div  class="coursor">
+
+</div>
+
+<div id="new">
+
+<div style="      border-top: 1px solid white;" class="elem">
+    <h2>JAVA</h2>
+    <img src="https://png.pngitem.com/pimgs/s/174-1746632_java-logo-transparent-png-java-programming-language-logo.png" alt="">
+</div>
+<div class="elem">
+    <h2>SPRING-BOOT</h2>
+    <img src="https://png.pngitem.com/pimgs/s/174-1746763_spring-framework-logo-01-spring-boot-hd-png.png" alt="">
+</div>
+<div class="elem">
+    <h2>HTML/CSS</h2>
+    <img src="https://png.pngitem.com/pimgs/s/214-2148505_html-5-que-es-hd-png-download.png" alt="">
+</div>
+<div class="elem">
+    <h2>JAVA-SCRIPT</h2>
+    <img src="https://png.pngitem.com/pimgs/s/275-2750983_javascript-hd-png-download.png" alt="">
+</div>
+<div class="elem">
+    <h2>SQL</h2>
+    <img src="https://png.pngitem.com/pimgs/s/197-1973343_sql-database-icon-png-transparent-png.png" alt="">
+</div>
+</div>
+    <script>
+var main =document.querySelector("body")
+var crsr =document.querySelector(" .coursor")
+
+
+
+
+main.addEventListener("mousemove",function(dets){
+
+    crsr.style.left=dets.x+"px"
+    crsr.style.top=dets.y+"px"
+})
+crsr.style.backgroundColor ="white"
+
+
+var elem =document.querySelectorAll(".elem")
+
+elem.forEach(function (val){
+
+    val.addEventListener("mouseenter",function(){
+val.childNodes[3].style.opacity =1
+
+          });
+          val.addEventListener("mouseleave",function(){
+val.childNodes[3].style.opacity =0
+
+          });
+          val.addEventListener("mousemove",function(dets){
+val.childNodes[3].style.left =dets.x+"px"
+
+
+          });
+
+})
+    </script>
+</body>
+</html>
