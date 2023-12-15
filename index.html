@@ -145,6 +145,39 @@
      a:hover{
         color: rgb(152, 144, 144);
      }
+     #pontainer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 400px;
+
+     }
+     .card {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-left: 91px;
+    margin-top: -45px;
+}
+.card2{
+      object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border: 4px solid rgb(255, 255, 255);
+ filter: saturate(100%);
+    border-radius: 10px;
+    transition: 0.3s;
+    filter: grayscale(100%);
+}
+.card2:hover {
+    height: 310px;
+    width: 310px;
+    filter: grayscale(0%);
+}
+
+     
     </style>
 </head>
 <body>
@@ -152,7 +185,7 @@
       
         <div class="j1" ><a href="">Home</a></div>
         <div class="j1"><a href="#new">Skills</a></div>
-        <div class="j1"><a href="">Projects</a></div>
+        <div class="j1"><a href="#pontainer">Projects</a></div>
         <div class="j1"><a href="">Certification</a></div>
     </div>
     <div id="cont">
@@ -193,6 +226,20 @@
     <h2>SQL</h2>
     <img src="https://png.pngitem.com/pimgs/s/197-1973343_sql-database-icon-png-transparent-png.png" alt="">
 </div>
+</div>
+
+<div id="pontainer">
+<div class="card">
+   <a href="https://youtu.be/4TLCzCc29mw?si=qVJzYwIweElU7h9C"> <img class="card2" src="pandya.png" alt=""> </a>
+</div>
+<div class="card">
+    <a href="https://amogh098.github.io/freewebsite/"> <img class="card2" src="jack.png" alt=""></a>
+ </div>
+ <div class="card">
+    <a href="https://amogh098.github.io/XOPROJ/"> <img class="card2" src="x-o.png" alt=""></a>
+ </div>
+
+
 </div>
     <script>
 var main =document.querySelector("body")
